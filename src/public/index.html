@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brave Network Shield</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Background layers -->
+  <div class="bg-layer"></div>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="particles"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">&#9670;</div>
+        <div>
+          <div class="brand-name">NEURON</div>
+          <div class="brand-sub">Network Shield</div>
+        </div>
+      </div>
+      <nav class="tabs">
+        <button class="tab active" data-page="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+          Dashboard
+        </button>
+        <button class="tab" data-page="rules">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          Rules
+        </button>
+        <button class="tab" data-page="devices">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+          Devices & DNS
+        </button>
+        <button class="tab" data-page="filters">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+          Filter Lists
+        </button>
+        <button class="tab" data-page="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          Settings
+        </button>
+        <button class="tab" data-page="logs">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+          Logs
+        </button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="top-status" id="kernel-status">
+          <span class="top-dot pulse"></span>
+          <span>Online</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main id="content">
+
+    <!-- ═══ DASHBOARD ═══ -->
+    <div id="page-dashboard" class="page active">
+
+      <div class="hero-stats">
+        <div class="hero-stat" style="--stat-color: #ff6b9d">
+          <div class="hero-stat-label">Allowed</div>
+          <div class="hero-stat-value" id="stat-allowed">0</div>
+          <div class="hero-stat-rate" id="stat-allowed-rate">&#8593; 0/s</div>
+        </div>
+        <div class="hero-stat" style="--stat-color: #00e5ff">
+          <div class="hero-stat-label">Blocked</div>
+          <div class="hero-stat-value" id="stat-blocked">0</div>
+          <div class="hero-stat-rate" id="stat-blocked-rate">&#8593; 0/s</div>
+        </div>
+        <div class="hero-stat" style="--stat-color: #fbbf24">
+          <div class="hero-stat-label">Inspected</div>
+          <div class="hero-stat-value" id="stat-inspected">0</div>
+          <div class="hero-stat-rate" id="stat-inspected-rate">&#8593; 0/s</div>
+        </div>
+        <div class="hero-stat" style="--stat-color: #a78bfa">
+          <div class="hero-stat-label">Rules Active</div>
+          <div class="hero-stat-value" id="stat-rules">0</div>
+          <div class="hero-stat-rate">&#9830; Filter Lists</div>
+        </div>
+      </div>
+
+      <div class="dual-pane">
+        <div class="pane pane-large">
+          <div class="pane-header">
+            <span class="pane-title">Live Threat Map</span>
+            <div class="pane-legend">
+              <span><span class="leg-dot" style="background:#ff6b9d"></span> Allowed</span>
+              <span><span class="leg-dot" style="background:#00e5ff"></span> Blocked</span>
+              <span><span class="leg-dot" style="background:#fbbf24"></span> Heuristics</span>
+            </div>
+          </div>
+          <div class="pane-body chart-body">
+            <canvas id="traffic-chart"></canvas>
+            <canvas id="threat-map" style="position:absolute;inset:0;pointer-events:none;opacity:0.6;"></canvas>
+          </div>
+        </div>
+        <div class="pane">
+          <div class="pane-header">
+            <span class="pane-title">Recent Events</span>
+            <span class="pane-badge" id="event-count">0</span>
+          </div>
+          <div class="pane-body">
+            <div class="event-list" id="event-body">
+              <div class="event-empty">No events yet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dual-pane">
+        <div class="pane">
+          <div class="pane-header">
+            <span class="pane-title">Top Blocked</span>
+            <span class="pane-badge">Live</span>
+          </div>
+          <div class="pane-body">
+            <div class="event-list" id="top-blocked-body">
+              <div class="event-empty">No blocked domains</div>
+            </div>
+          </div>
+        </div>
+        <div class="pane">
+          <div class="pane-header">
+            <span class="pane-title">Log Feed</span>
+            <button class="pane-action" onclick="document.getElementById('log-feed').innerHTML='';logCount=0;document.getElementById('log-count').textContent='0 queries'">Clear</button>
+          </div>
+          <div class="pane-body log-feed" id="log-feed">
+            <div class="event-empty" id="log-count">0 queries</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ RULES ═══ -->
+    <div id="page-rules" class="page">
+      <div class="toolbar">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Search rules..." id="rules-search" oninput="loadRules()">
+        </div>
+        <button class="btn btn-primary" onclick="showAddRuleModal()">+ Add Rule</button>
+        <button class="btn btn-ghost" onclick="clearRules()">Clear All</button>
+      </div>
+      <div class="pane">
+        <div class="pane-body" style="max-height:none">
+          <table class="data-table">
+            <thead><tr><th>ID</th><th>Pattern</th><th>Action</th><th></th></tr></thead>
+            <tbody id="rules-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ FILTERS ═══ -->
+    <div id="page-filters" class="page">
+      <div class="toolbar">
+        <button class="btn btn-primary" onclick="updateFilters()">&#8635; Update Lists</button>
+      </div>
+      <div class="pane">
+        <div class="pane-body" style="max-height:none">
+          <table class="data-table">
+            <thead><tr><th>Name</th><th>Source</th><th>Format</th><th>Status</th></tr></thead>
+            <tbody id="filters-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ DEVICES & DNS ═══ -->
+    <div id="page-devices" class="page">
+      <div class="dual-pane">
+        <!-- Local Custom DNS -->
+        <div class="pane">
+          <div class="pane-header">
+            <span class="pane-title">Custom Local DNS</span>
+            <button class="btn btn-primary" onclick="showAddCustomDNSModal()" style="padding: 4px 10px; font-size: 10px;">+ Add Record</button>
+          </div>
+          <div class="pane-body">
+            <table class="data-table">
+              <thead><tr><th>Domain</th><th>IP Address</th><th></th></tr></thead>
+              <tbody id="custom-dns-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Device Profiles -->
+        <div class="pane">
+          <div class="pane-header">
+            <span class="pane-title">Client Profiles</span>
+            <button class="btn btn-primary" onclick="showAddProfileModal()" style="padding: 4px 10px; font-size: 10px;">+ Add Client</button>
+          </div>
+          <div class="pane-body">
+            <table class="data-table">
+              <thead><tr><th>IP Address</th><th>Profile Name</th></tr></thead>
+              <tbody id="profiles-body">
+                <tr><td colspan="2" class="event-empty">No specific profiles configured.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ SETTINGS ═══ -->
+    <div id="page-settings" class="page">
+      <div class="dual-pane">
+        <div class="config-card pane">
+          <h3>Advanced Security</h3>
+          <div class="cfg-row">
+            <label><input type="checkbox" id="enable-heuristics" checked onchange="saveSettings()"> AI Heuristics (DGA & Typosquatting)</label>
+            <p style="font-size:10px; color:var(--text3); margin-top:4px; margin-left:24px;">Automatically detects and blocks mathematically generated malware domains.</p>
+          </div>
+          <div class="cfg-row">
+            <label><input type="checkbox" id="enable-safesearch" checked onchange="saveSettings()"> Force Safe Search</label>
+            <p style="font-size:10px; color:var(--text3); margin-top:4px; margin-left:24px;">Transparently rewrites Google, Bing, and YouTube DNS to their strict safe-search IPs.</p>
+          </div>
+          <div class="cfg-row">
+            <label><input type="checkbox" id="enable-rebinding" checked onchange="saveSettings()"> DNS Rebinding Protection</label>
+            <p style="font-size:10px; color:var(--text3); margin-top:4px; margin-left:24px;">Stops external domains from resolving to local network IPs.</p>
+          </div>
+        </div>
+
+        <div class="config-card pane">
+          <h3>Upstream DoH Server</h3>
+          <div class="cfg-row">
+            <label>Primary DoH Server</label>
+            <input type="text" id="doh-url" value="https://cloudflare-dns.com/dns-query">
+          </div>
+          <button class="btn btn-primary" onclick="saveDNSConfig()">Save Changes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ LOGS (full page) ═══ -->
+    <div id="page-logs" class="page">
+      <div class="toolbar">
+        <button class="btn btn-ghost" onclick="document.getElementById('log-viewer').innerHTML='';logCount=0;document.getElementById('log-count2').textContent='0 queries'">Clear</button>
+        <span class="log-meta" id="log-count2">0 queries</span>
+      </div>
+      <div class="log-viewer" id="log-viewer"></div>
+    </div>
+
+  </main>
+</div>
+
+  <!-- Add Rule Modal -->
+  <div class="modal-overlay" id="add-rule-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Add Rule</h3>
+        <button class="modal-x" onclick="closeModal('add-rule-modal')">&times;</button>
+      </div>
+      <div class="cfg-row">
+        <label>Domain Pattern</label>
+        <input type="text" id="rule-pattern" placeholder="example.com">
+      </div>
+      <div class="cfg-row">
+        <label>Action</label>
+        <select id="rule-action">
+          <option value="1">Block Ad / Tracker</option>
+          <option value="2">Block Malware</option>
+          <option value="3">Block Phishing</option>
+          <option value="0">Allow</option>
+        </select>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" onclick="closeModal('add-rule-modal')">Cancel</button>
+        <button class="btn btn-primary" onclick="addRule()">Add Rule</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Custom DNS Modal -->
+  <div class="modal-overlay" id="add-dns-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Add Local DNS Record</h3>
+        <button class="modal-x" onclick="closeModal('add-dns-modal')">&times;</button>
+      </div>
+      <div class="cfg-row">
+        <label>Local Domain</label>
+        <input type="text" id="dns-domain" placeholder="my-server.local">
+      </div>
+      <div class="cfg-row">
+        <label>IP Address</label>
+        <input type="text" id="dns-ip" placeholder="192.168.1.50">
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" onclick="closeModal('add-dns-modal')">Cancel</button>
+        <button class="btn btn-primary" onclick="addCustomDNS()">Add Record</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

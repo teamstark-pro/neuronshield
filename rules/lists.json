@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "lists": [
+    {
+      "name": "Brave Shield Standard",
+      "url": "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-standard-list.txt",
+      "format": "ublock",
+      "enabled": true,
+      "category": "ads+trackers"
+    },
+    {
+      "name": "Brave Shield Aggressive",
+      "url": "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-aggressive-list.txt",
+      "format": "ublock",
+      "enabled": false,
+      "category": "ads+trackers"
+    },
+    {
+      "name": "uBlock Origin EasyList",
+      "url": "https://easylist.to/easylist/easylist.txt",
+      "format": "ublock",
+      "enabled": true,
+      "category": "ads"
+    },
+    {
+      "name": "uBlock Origin EasyPrivacy",
+      "url": "https://easylist.to/easylist/easyprivacy.txt",
+      "format": "ublock",
+      "enabled": true,
+      "category": "trackers"
+    },
+    {
+      "name": "uBlock Origin Malware Domains",
+      "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt",
+      "format": "hosts",
+      "enabled": true,
+      "category": "malware"
+    },
+    {
+      "name": "Phishing URL Blocklist",
+      "url": "https://raw.githubusercontent.com/Dogino/Discord-Phishing-URLs/main/pihole-phishing-adlist.txt",
+      "format": "hosts",
+      "enabled": true,
+      "category": "phishing"
+    },
+    {
+      "name": "Peter Lowe's List",
+      "url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext",
+      "format": "hosts",
+      "enabled": true,
+      "category": "ads+trackers"
+    },
+    {
+      "name": "OISD Big List",
+      "url": "https://big.oisd.nl/domainswild2",
+      "format": "domains",
+      "enabled": false,
+      "category": "full"
+    }
+  ]
+}

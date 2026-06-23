@@ -1,0 +1,15 @@
+{
+  "name": "brave-network-shield",
+  "version": "1.0.0",
+  "description": "DNS-based firewall using Brave Shield & uBlock Origin filter lists",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "update-lists": "node src/lists-loader.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "ws": "^8.18.0"
+  }
+}
